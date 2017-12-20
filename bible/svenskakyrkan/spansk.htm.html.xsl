@@ -95,6 +95,8 @@
     <xsl:variable name="translator_nat" select="''"/>
     <!-- select license type: free, standard or other -->
     <xsl:variable name="license_type" select="'free'"/>
+    <!-- e.g. Sámediggi journal number -->
+    <xsl:variable name="contract_id" select="''"/>
     <!-- The name and email of the submitter -->
     <xsl:variable name="sub_name" select="'Kevin Brubeck Unhammer'"/>
     <xsl:variable name="sub_email" select="'unhammer@fsfe.org'"/>
@@ -174,8 +176,8 @@
         <parallel_text xml:lang="smn" location=""/>
         <parallel_text xml:lang="sms" location=""/>
         <parallel_text xml:lang="swe" location=""/>
-    <parallel_text location="tyska.htm.html" xml:lang="deu"/>
-<parallel_text location="franska.htm.html" xml:lang="fra"/>
+    <parallel_text location="franska.htm.html" xml:lang="fra"/>
+<parallel_text location="tyska.htm.html" xml:lang="deu"/>
 <parallel_text location="romani.htm.html" xml:lang="rmy-rka"/>
 </xsl:variable>
 
@@ -282,6 +284,11 @@
         1;3;8=20, 4;5;7=10
     -->
     <xsl:variable name="linespacing" select="''"/>
+
+    <!--
+        Choose which chapters to exclude from an epub file.
+    -->
+    <xsl:variable name="epub_excluded_chapters" select="''"/>
 
     <!--
         Information about what is normal text size in pdf documents.
